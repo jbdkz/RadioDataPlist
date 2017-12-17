@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B16D0EBF1FE07BE4007CE28D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B16D0EBE1FE07BE4007CE28D /* Info.plist */; };
+		B16D0EC11FE0A8E4007CE28D /* RadioList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B16D0EC01FE0A8E4007CE28D /* RadioList.plist */; };
 		B1B875C91FDE1EE200D039B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B875C81FDE1EE200D039B9 /* AppDelegate.swift */; };
 		B1B875CB1FDE1EE200D039B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B875CA1FDE1EE200D039B9 /* ViewController.swift */; };
 		B1B875CE1FDE1EE200D039B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B875CC1FDE1EE200D039B9 /* Main.storyboard */; };
 		B1B875D01FDE1EE200D039B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B875CF1FDE1EE200D039B9 /* Assets.xcassets */; };
 		B1B875D31FDE1EE200D039B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B875D11FDE1EE200D039B9 /* LaunchScreen.storyboard */; };
-		B1B875DB1FDE1FFC00D039B9 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B875DA1FDE1FFC00D039B9 /* NewNoteViewController.swift */; };
-		B1B875DD1FDE20D000D039B9 /* notes.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1B875DC1FDE20CF00D039B9 /* notes.plist */; };
+		B1B875DB1FDE1FFC00D039B9 /* NewRadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B875DA1FDE1FFC00D039B9 /* NewRadioViewController.swift */; };
 		B1B875DF1FDE27C800D039B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1B875DE1FDE27C800D039B9 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B1B875C51FDE1EE100D039B9 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B16D0EBE1FE07BE4007CE28D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B16D0EC01FE0A8E4007CE28D /* RadioList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RadioList.plist; sourceTree = "<group>"; };
+		B1B875C51FDE1EE100D039B9 /* RadioData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B875C81FDE1EE200D039B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B875CA1FDE1EE200D039B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1B875CD1FDE1EE200D039B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1B875CF1FDE1EE200D039B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1B875D21FDE1EE200D039B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B1B875D41FDE1EE200D039B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1B875DA1FDE1FFC00D039B9 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
-		B1B875DC1FDE20CF00D039B9 /* notes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = notes.plist; sourceTree = "<group>"; };
+		B1B875DA1FDE1FFC00D039B9 /* NewRadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRadioViewController.swift; sourceTree = "<group>"; };
 		B1B875DE1FDE27C800D039B9 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +45,7 @@
 		B1B875BC1FDE1EDF00D039B9 = {
 			isa = PBXGroup;
 			children = (
-				B1B875C71FDE1EE100D039B9 /* NotesApp */,
+				B1B875C71FDE1EE100D039B9 /* RadioData */,
 				B1B875C61FDE1EE100D039B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,33 +53,33 @@
 		B1B875C61FDE1EE100D039B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1B875C51FDE1EE100D039B9 /* NotesApp.app */,
+				B1B875C51FDE1EE100D039B9 /* RadioData.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B1B875C71FDE1EE100D039B9 /* NotesApp */ = {
+		B1B875C71FDE1EE100D039B9 /* RadioData */ = {
 			isa = PBXGroup;
 			children = (
+				B16D0EC01FE0A8E4007CE28D /* RadioList.plist */,
+				B16D0EBE1FE07BE4007CE28D /* Info.plist */,
 				B1B875C81FDE1EE200D039B9 /* AppDelegate.swift */,
-				B1B875DA1FDE1FFC00D039B9 /* NewNoteViewController.swift */,
+				B1B875DA1FDE1FFC00D039B9 /* NewRadioViewController.swift */,
 				B1B875CA1FDE1EE200D039B9 /* ViewController.swift */,
 				B1B875CC1FDE1EE200D039B9 /* Main.storyboard */,
 				B1B875CF1FDE1EE200D039B9 /* Assets.xcassets */,
 				B1B875D11FDE1EE200D039B9 /* LaunchScreen.storyboard */,
-				B1B875DC1FDE20CF00D039B9 /* notes.plist */,
-				B1B875D41FDE1EE200D039B9 /* Info.plist */,
 				B1B875DE1FDE27C800D039B9 /* LaunchScreen.xib */,
 			);
-			path = NotesApp;
+			path = RadioData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1B875C41FDE1EDF00D039B9 /* NotesApp */ = {
+		B1B875C41FDE1EDF00D039B9 /* RadioData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1B875D71FDE1EE200D039B9 /* Build configuration list for PBXNativeTarget "NotesApp" */;
+			buildConfigurationList = B1B875D71FDE1EE200D039B9 /* Build configuration list for PBXNativeTarget "RadioData" */;
 			buildPhases = (
 				B1B875C11FDE1EDF00D039B9 /* Sources */,
 				B1B875C21FDE1EDF00D039B9 /* Frameworks */,
@@ -88,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = NotesApp;
+			name = RadioData;
 			productName = NotesApp;
-			productReference = B1B875C51FDE1EE100D039B9 /* NotesApp.app */;
+			productReference = B1B875C51FDE1EE100D039B9 /* RadioData.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B1B875C01FDE1EDF00D039B9 /* Build configuration list for PBXProject "NotesApp" */;
+			buildConfigurationList = B1B875C01FDE1EDF00D039B9 /* Build configuration list for PBXProject "RadioData" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1B875C41FDE1EDF00D039B9 /* NotesApp */,
+				B1B875C41FDE1EDF00D039B9 /* RadioData */,
 			);
 		};
 /* End PBXProject section */
@@ -134,8 +135,9 @@
 			files = (
 				B1B875DF1FDE27C800D039B9 /* LaunchScreen.xib in Resources */,
 				B1B875D31FDE1EE200D039B9 /* LaunchScreen.storyboard in Resources */,
+				B16D0EBF1FE07BE4007CE28D /* Info.plist in Resources */,
 				B1B875D01FDE1EE200D039B9 /* Assets.xcassets in Resources */,
-				B1B875DD1FDE20D000D039B9 /* notes.plist in Resources */,
+				B16D0EC11FE0A8E4007CE28D /* RadioList.plist in Resources */,
 				B1B875CE1FDE1EE200D039B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,7 +151,7 @@
 			files = (
 				B1B875CB1FDE1EE200D039B9 /* ViewController.swift in Sources */,
 				B1B875C91FDE1EE200D039B9 /* AppDelegate.swift in Sources */,
-				B1B875DB1FDE1FFC00D039B9 /* NewNoteViewController.swift in Sources */,
+				B1B875DB1FDE1FFC00D039B9 /* NewRadioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NotesApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RadioData/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jdiczhazy.NotesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,7 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NotesApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RadioData/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jdiczhazy.NotesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,7 +315,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B1B875C01FDE1EDF00D039B9 /* Build configuration list for PBXProject "NotesApp" */ = {
+		B1B875C01FDE1EDF00D039B9 /* Build configuration list for PBXProject "RadioData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1B875D51FDE1EE200D039B9 /* Debug */,
@@ -322,7 +324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1B875D71FDE1EE200D039B9 /* Build configuration list for PBXNativeTarget "NotesApp" */ = {
+		B1B875D71FDE1EE200D039B9 /* Build configuration list for PBXNativeTarget "RadioData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1B875D81FDE1EE200D039B9 /* Debug */,

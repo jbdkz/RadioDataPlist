@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notes-->
+        <!--Radios-->
         <scene sceneID="zN9-rw-4Lg">
             <objects>
-                <tableViewController id="i7G-No-Pqi" customClass="ViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="i7G-No-Pqi" customClass="ViewController" customModule="RadioData" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MXI-i0-5D6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ibq-Ra-umD" kind="presentation" identifier="updateSegue" trigger="accessoryAction" id="GOo-qY-KVj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,15 +36,10 @@
                             <outlet property="delegate" destination="i7G-No-Pqi" id="AXI-4Y-QhV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Notes" id="quw-1z-pnc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="qvn-yz-9HP">
+                    <navigationItem key="navigationItem" title="Radios" id="quw-1z-pnc">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="H3S-q8-t99">
                             <connections>
-                                <action selector="editTable:" destination="i7G-No-Pqi" id="VKa-s7-1Qd"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6hE-KB-Fa9">
-                            <connections>
-                                <segue destination="Ibq-Ra-umD" kind="presentation" id="k6t-5C-eD0"/>
+                                <segue destination="Ibq-Ra-umD" kind="presentation" identifier="addSegue" id="24y-TU-kpV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -50,26 +48,19 @@
             </objects>
             <point key="canvasLocation" x="338" y="54"/>
         </scene>
-        <!--New Note View Controller-->
+        <!--New Radio View Controller-->
         <scene sceneID="dcu-Q3-QU8">
             <objects>
-                <viewController id="Ibq-Ra-umD" customClass="NewNoteViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ibq-Ra-umD" customClass="NewRadioViewController" customModule="RadioData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BDb-Ea-aKA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="04k-Ki-3yz">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-n0-6qa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="New Note" id="1O9-sf-uqM">
+                                    <navigationItem title="New Radio" id="1O9-sf-uqM">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1tQ-Zt-KU3">
                                             <connections>
                                                 <action selector="cancel:" destination="Ibq-Ra-umD" id="bqs-g3-i0z"/>
@@ -77,12 +68,54 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Bfr-ni-EVk">
                                             <connections>
-                                                <action selector="saveNote:" destination="Ibq-Ra-umD" id="lrP-e7-YSx"/>
+                                                <action selector="saveBtn:" destination="Ibq-Ra-umD" id="J3H-88-m6Z"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epr-qg-nVE">
+                                <rect key="frame" x="16" y="71" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Model:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-AB-ban">
+                                <rect key="frame" x="16" y="109" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serial No:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWl-ks-7FW">
+                                <rect key="frame" x="16" y="151" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S24-yg-5VI">
+                                <rect key="frame" x="106" y="104" width="247" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPj-In-0ph">
+                                <rect key="frame" x="106" y="146" width="247" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8R-d5-BQc">
+                                <rect key="frame" x="106" y="66" width="247" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RAm-8Z-W4L"/>
@@ -90,12 +123,14 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="textView" destination="04k-Ki-3yz" id="MV9-cD-Y7d"/>
+                        <outlet property="makeTxt" destination="A8R-d5-BQc" id="VQS-0O-vaY"/>
+                        <outlet property="modelTxt" destination="S24-yg-5VI" id="oMX-kX-W2C"/>
+                        <outlet property="snTxt" destination="sPj-In-0ph" id="ibF-v7-Jqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpH-x8-4tk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="54"/>
+            <point key="canvasLocation" x="1021.6" y="53.523238380809602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ip0-qD-BCy">
@@ -114,4 +149,7 @@
             <point key="canvasLocation" x="-407" y="54"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="24y-TU-kpV"/>
+    </inferredMetricsTieBreakers>
 </document>

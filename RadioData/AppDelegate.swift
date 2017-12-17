@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  NotesApp
+//  RadioData
 //
 //  Created by John Diczhazy on 12/10/17.
 //  Copyright © 2017 JohnDiczhazy. All rights reserved.
@@ -12,17 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
     var plistPathInDocument:String = String()
     
-    
+    // Copy RadioList.plist to Application's Documents folder if it does not exist.
     func preparePlistForUse(){
         // 1
         let rootPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, .userDomainMask, true)[0]
         // 2
-        plistPathInDocument = rootPath + "/notes.plist"
+        plistPathInDocument = rootPath + "/RadioList.plist"
         if !FileManager.default.fileExists(atPath: plistPathInDocument){
-            let plistPathInBundle = Bundle.main.path(forResource: "notes", ofType: "plist") as String!
+            let plistPathInBundle = Bundle.main.path(forResource: "RadioList", ofType: "plist") as String!
             // 3
             do {
                 try FileManager.default.copyItem(atPath: plistPathInBundle!, toPath: plistPathInDocument)
