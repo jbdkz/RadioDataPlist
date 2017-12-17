@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>make</key>
+		<string>Zenith</string>
+		<key>model</key>
+		<string>X334</string>
+		<key>sn</key>
+		<string>12345</string>
+	</dict>
+	<dict>
+		<key>make</key>
+		<string>RCA</string>
+		<key>model</key>
+		<string>X10</string>
+		<key>sn</key>
+		<string>54321</string>
+	</dict>
+	<dict>
+		<key>make</key>
+		<string>Trav-Ler</string>
+		<key>model</key>
+		<string>X1</string>
+		<key>sn</key>
+		<string>554433</string>
+	</dict>
+</array>
+</plist>
